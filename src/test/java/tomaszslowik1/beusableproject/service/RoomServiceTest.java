@@ -52,8 +52,8 @@ public class RoomServiceTest {
         RoomOccupancyDto result = roomService.calculateRoomOccupancy(7,1);
         assertEquals(7, result.getPremiumUsage());
         assertEquals(1, result.getEconomyUsage());
-        assertEquals(BigDecimal.valueOf(1153), result.getPremiumGain());
-        assertEquals(BigDecimal.valueOf(45.99), result.getEconomyGain());
+        assertEquals(BigDecimal.valueOf(1153.99), result.getPremiumGain());
+        assertEquals(BigDecimal.valueOf(45), result.getEconomyGain());
     }
 
 }
