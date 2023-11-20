@@ -1,17 +1,19 @@
 package tomaszslowik1.beusableproject.dto;
 
-import lombok.Data;
+import lombok.*;
 
 import java.math.BigDecimal;
 
-@Data
+@Value
+@Builder
 public class RoomOccupancyDto {
 
-    private Integer premiumUsage;
+    Integer premiumUsage;
 
-    private Integer economyUsage;
+    Integer economyUsage;
 
-    private BigDecimal premiumGain;
+    BigDecimal premiumGain;
 
-    private BigDecimal economyGain;
+    BigDecimal economyGain;
+
 }
