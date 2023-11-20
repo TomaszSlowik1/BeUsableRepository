@@ -1,5 +1,7 @@
 package tomaszslowik1.beusableproject.service;
 
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 import tomaszslowik1.beusableproject.dto.RoomOccupancyDto;
 import tomaszslowik1.beusableproject.repository.RoomRepository;
 
@@ -9,13 +11,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+@RequiredArgsConstructor
+@Service
 public class RoomServiceImpl implements RoomService {
 
     private final RoomRepository roomRepository;
-
-    public RoomServiceImpl(RoomRepository roomRepository) {
-        this.roomRepository = roomRepository;
-    }
 
     @Override
     public RoomOccupancyDto calculateRoomOccupancy(Integer freePremiumRooms, Integer freeEconomyRooms)  {
